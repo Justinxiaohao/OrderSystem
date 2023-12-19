@@ -1,4 +1,6 @@
-package cn.sdtbu.edu.BeverageOrder.Menu;
+package cn.sdtbu.edu.beberageorder.menu;
+
+import cn.sdtbu.edu.beberageorder.menu.MealMenu;
 
 /**
  * ClassName:s
@@ -7,7 +9,7 @@ package cn.sdtbu.edu.BeverageOrder.Menu;
  */
 
 
-public class VegetarianMenu extends MealMenu{
+public class VegetarianMenu extends MealMenu {
 
     public VegetarianMenu(){
 

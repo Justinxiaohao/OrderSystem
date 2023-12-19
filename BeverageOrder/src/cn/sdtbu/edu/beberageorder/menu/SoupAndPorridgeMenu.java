@@ -1,11 +1,13 @@
-package cn.sdtbu.edu.BeverageOrder.Menu;
+package cn.sdtbu.edu.beberageorder.menu;
+
+import cn.sdtbu.edu.beberageorder.menu.MealMenu;
 
 /**
  * ClassName:Soup
  * Package:cn.sdtbu.edu.BeverageOrder.Menu
  * Author:@Wyh
  */
-    public class SoupAndPorridgeMenu extends MealMenu{
+    public class SoupAndPorridgeMenu extends MealMenu {
 
         public SoupAndPorridgeMenu(){
 

@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.BeverageOrder.Menu;
+package cn.sdtbu.edu.beberageorder.menu;
 
 /**
  * ClassName:ShowOrderingRecord

@@ -1,4 +1,6 @@
-package cn.sdtbu.edu.BeverageOrder.Menu;
+package cn.sdtbu.edu.beberageorder.menu;
+
+import cn.sdtbu.edu.beberageorder.menu.MealMenu;
 
 /**
  * ClassName:ss
@@ -7,7 +9,7 @@ package cn.sdtbu.edu.BeverageOrder.Menu;
  */
 
 
-public class MilkyTeaMenu extends MealMenu{
+public class MilkyTeaMenu extends MealMenu {
 
     public MilkyTeaMenu(){
 
