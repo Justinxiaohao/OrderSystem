@@ -13,6 +13,22 @@ public class Meal {
     private double price;
     private Image image;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
     public Meal(String name, String description, double price, String filename) {
         super();
         this.name = name;

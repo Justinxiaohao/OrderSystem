@@ -28,9 +28,8 @@ public class OrderingWindow extends JFrame implements ActionListener{
     private HashSet<String> idSet;
 
     public OrderingWindow(){
-        setTitle("顾客点菜界面");
+        setTitle("小豪茶饮料点餐系统");
         idSet=new HashSet<String>();
-
         pNorth=new JPanel();
         idTextField=new JTextField(10);
         idTextField.addActionListener(this);
@@ -40,7 +39,6 @@ public class OrderingWindow extends JFrame implements ActionListener{
         pNorth.add(idTextField);
         pNorth.add(new JLabel("点餐日期和时间："));
         pNorth.add(dateTextField);
-
         pCenter=new JPanel();
         pCenter.setBorder(new TitledBorder(new LineBorder(Color.BLUE),"分类点菜",TitledBorder.LEFT,TitledBorder.TOP));
         meatButton=new JButton("荤菜");
@@ -155,6 +153,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
+        new DiningStyleChoice();
         new OrderingWindow();
     }
 }
