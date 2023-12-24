@@ -1,6 +1,4 @@
-package cn.sdtbu.edu.beberageorder.menu;
-
-import cn.sdtbu.edu.beberageorder.menu.MealMenu;
+package cn.sdtbu.edu.order.menu;
 
 /**
  * ClassName:Soup

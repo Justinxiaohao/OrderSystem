@@ -1,13 +1,10 @@
-package cn.sdtbu.edu.beberageorder.menu;
+package cn.sdtbu.edu.order.menu;
 
 /**
  * ClassName:OrderDishes
  * Package:cn.sdtbu.edu.BeverageOrder.Menu
  * Author:@Wyh
  */
-
-import cn.sdtbu.edu.beberageorder.menu.Meal;
-import cn.sdtbu.edu.beberageorder.menu.MealMenu;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

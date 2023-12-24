@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.beberageorder.menu;
+package cn.sdtbu.edu.order.menu;
 
 /**
  * ClassName:d
@@ -6,8 +6,6 @@ package cn.sdtbu.edu.beberageorder.menu;
  * Author:@Wyh
  */
 
-
-import cn.sdtbu.edu.beberageorder.menu.Meal;
 
 import java.util.LinkedList;
 

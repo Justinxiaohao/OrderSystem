@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.beberageorder.menu;
+package cn.sdtbu.edu.order.menu;
 
 /**
  * ClassName:OrderingWindow
@@ -153,7 +153,6 @@ public class OrderingWindow extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        new DiningStyleChoice();
         new OrderingWindow();
     }
 }

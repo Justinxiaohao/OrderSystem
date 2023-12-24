@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.beberageorder.menu;
+package cn.sdtbu.edu.order.menu;
 
 import java.awt.*;
 
@@ -13,22 +13,15 @@ public class Meal {
     private double price;
     private Image image;
 
-    public void setName(String name) {
+
+    public Meal() {
+    }
+    public Meal(String name, String description, double price, Image image) {
         this.name = name;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
-    }
-
-    public void setPrice(double price) {
         this.price = price;
-    }
-
-    public void setImage(Image image) {
         this.image = image;
     }
-
     public Meal(String name, String description, double price, String filename) {
         super();
         this.name = name;
@@ -37,20 +30,37 @@ public class Meal {
         Toolkit toolkit=Toolkit.getDefaultToolkit();
         this.image=toolkit.createImage(filename);
     }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public Image getImage() {
         return image;
     }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+
 }
