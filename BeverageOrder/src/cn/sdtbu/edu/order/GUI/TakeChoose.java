@@ -1,5 +1,7 @@
 package cn.sdtbu.edu.order.GUI;
 
+import cn.sdtbu.edu.order.menu.OrderingWindow;
+
 import javax.swing.*;
 
 /**
@@ -18,25 +20,45 @@ import java.awt.event.ActionListener;
  */
 public class TakeChoose extends JFrame {
     public TakeChoose() {
-        setVisible(true);
-        setTitle("请选择堂食还是打包");
-        setBounds(500, 300, 600, 400);
-        setLayout(new FlowLayout(FlowLayout.CENTER));
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container c = getContentPane();
+        JFrame jf = new JFrame("请选择堂食还是打包带走");
+        ImageIcon background = new ImageIcon("images/background.jpg");
+        JLabel label = new JLabel(background);
+        label.setSize(background.getIconWidth(), background.getIconHeight());
+        jf.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));
+        Container container = jf.getContentPane();
+        JPanel panel = new JPanel();
         JButton btn1 = new JButton("堂食用餐");
         JButton btn2 = new JButton("打包带走");
-        btn1.setBorderPainted(false);
+        Dimension btnSize = new Dimension(200, 50);
+        btn1.setPreferredSize(btnSize);
+        btn2.setPreferredSize(btnSize);
+        panel.setOpaque(false);
+        panel.setLayout(new FlowLayout());
+        panel.add(btn1);
+        panel.add(btn2);
+        container.add(panel, BorderLayout.SOUTH);
+
+        jf.setSize(background.getIconWidth(), background.getIconHeight());
+        jf.setLocationRelativeTo(null);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
+
+
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 JOptionPane.showMessageDialog(TakeChoose.this, "您选择的是堂食用餐！！");
+                new OrderingWindow();
+                jf.dispose();
             }
         });
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
                 JOptionPane.showMessageDialog(TakeChoose.this, "您选择的是打包带走！！");
+                new OrderingWindow();
+                jf.dispose();
             }
         });
     }
