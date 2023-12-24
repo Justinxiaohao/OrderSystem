@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 public class PrivacyJFrame {
   public static void PrintFrame() {
         JFrame frame = new JFrame("点餐前，请先阅读我们的隐私政策");
-        frame.setBounds(500, 300, 600, 400);
+        frame.setBounds(500, 300, 600, 450);
 
         String text = "     感谢您使用本点餐系统，下面是我们的《隐私保护政策》。"
                 + "当您点击同意并使用我们的产品服务时，即表示您已经理解并同意该条款。"
@@ -41,13 +41,25 @@ public class PrivacyJFrame {
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new TakeChoose();
-                frame.dispose();
+                int res =  JOptionPane.showConfirmDialog(null,"确认同意吗","系统提示",
+                        JOptionPane.YES_NO_OPTION);
+                if (res == JOptionPane.YES_OPTION)
+                {
+                     new TakeChoose();
+                    frame.dispose();
+                }
+                else
+                {
+
+                    System.exit(0);
+                }
+
             }
         });
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "很抱歉，我们将无法为您服务","警告",JOptionPane.ERROR_MESSAGE);
                 System.exit(0);
             }
         });

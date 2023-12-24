@@ -24,7 +24,9 @@ public class TakeChoose extends JFrame {
         JFrame jf = new JFrame("请选择堂食还是打包带走");
         ImageIcon background = new ImageIcon("images/background.jpg");
         JLabel label = new JLabel(background);
-        label.setSize(background.getIconWidth(), background.getIconHeight());
+        jf.setBounds(500,300,600,450);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
         jf.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));
         Container container = jf.getContentPane();
         JPanel panel = new JPanel();
@@ -37,12 +39,10 @@ public class TakeChoose extends JFrame {
         panel.setLayout(new FlowLayout());
         panel.add(btn1);
         panel.add(btn2);
+        panel.add(jf.getContentPane().add(label));
         container.add(panel, BorderLayout.SOUTH);
 
-        jf.setSize(background.getIconWidth(), background.getIconHeight());
-        jf.setLocationRelativeTo(null);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.setVisible(true);
+
 
 
         btn1.addActionListener(new ActionListener() {

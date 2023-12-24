@@ -37,7 +37,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
         idTextField.addActionListener(this);
         dateTextField=new JTextField(20);
         dateTextField.setEditable(false);
-        pNorth.add(new JLabel("请输入您的桌号："));
+        pNorth.add(new JLabel("请输入您的取单号："));
         pNorth.add(idTextField);
         pNorth.add(new JLabel("点餐日期和时间："));
         pNorth.add(dateTextField);
@@ -70,10 +70,10 @@ public class OrderingWindow extends JFrame implements ActionListener{
         pCenter.add(baseBox);
 
         pSouth=new JPanel();
-        this.showButton=new JButton("显示点菜明细、结账");
+        this.showButton=new JButton("显示明细、结账");
         showButton.addActionListener(this);
         showButton.setEnabled(false);
-        this.stopOrderingButton=new JButton("结束本次点菜");
+        this.stopOrderingButton=new JButton("结束本次点单");
         stopOrderingButton.addActionListener(this);
         pSouth.add(showButton);
         pSouth.add(stopOrderingButton);
@@ -82,7 +82,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
         add(pCenter,"Center");
         add(pSouth,"South");
 
-        setBounds(500,300,600,400);
+        setBounds(500,300,600,450);
         this.setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -103,7 +103,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
                     this.soupAndPorridgeButton.setEnabled(true);
                     this.showButton.setEnabled(true);
                     Date nowTime=new Date();
-                    SimpleDateFormat matter=new SimpleDateFormat("点菜时间：yyyy-MM-dd HH:mm:ss");
+                    SimpleDateFormat matter=new SimpleDateFormat("下单时间：yyyy-MM-dd HH:mm:ss");
                     String date=matter.format(nowTime);
                     this.dateTextField.setText(date);
                     String filename=idTextField.getText()+"号桌点菜清单.txt";
