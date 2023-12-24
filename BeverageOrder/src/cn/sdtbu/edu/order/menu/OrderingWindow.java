@@ -6,6 +6,8 @@ package cn.sdtbu.edu.order.menu;
  * Author:@Wyh
  */
 
+import cn.sdtbu.edu.order.GUI.PrivacyJFrame;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
@@ -80,7 +82,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
         add(pCenter,"Center");
         add(pSouth,"South");
 
-        setBounds(100,100,600,230);
+        setBounds(500,300,600,400);
         this.setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -153,6 +155,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
+        new PrivacyJFrame();
         new OrderingWindow();
     }
 }
