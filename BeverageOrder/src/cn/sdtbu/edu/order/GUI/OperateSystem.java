@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.order.GUI.ManageOrder;
+package cn.sdtbu.edu.order.GUI;
 
 import java.util.ArrayList;
 import java.util.List;

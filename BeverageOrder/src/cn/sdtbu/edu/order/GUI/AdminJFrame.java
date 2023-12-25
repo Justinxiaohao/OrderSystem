@@ -1,8 +1,5 @@
 package cn.sdtbu.edu.order.GUI;
 
-import cn.sdtbu.edu.order.GUI.ManageOrder.Manage;
-import cn.sdtbu.edu.order.GUI.ManageOrder.OperateSystem;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,7 +14,7 @@ public class AdminJFrame extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
 
-    public AdminJFrame() {
+    public void AdminJFrame() {
         setTitle("奶茶管理员后台登录");
         setBounds(800,400,270,150);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,11 +34,6 @@ public class AdminJFrame extends JFrame {
                     Manage ma = new Manage();
                     ma.createAndShowGUI();
                     setVisible(false);
-                    OperateSystem.setMealList(SaveOrder.loadFromFile("mealList.dat"));
-
-                    OperateSystem.addMeal(new OperateSystem("新产品", "新产品描述", 10.99));
-
-                    SaveOrder.saveToFile(OperateSystem.getMealList(), "mealList.dat");
                 } else {
                     JOptionPane.showMessageDialog(null, "用户名或密码错误", "错误", JOptionPane.ERROR_MESSAGE);
                 }
@@ -60,7 +52,4 @@ public class AdminJFrame extends JFrame {
         return username.equals("zfh") && password.equals("123456");
     }
 
-    public static void main(String[] args) {
-        new AdminJFrame();
-    }
 }

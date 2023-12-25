@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.order.GUI.ManageOrder;
+package cn.sdtbu.edu.order.GUI;
 
 import javax.swing.*;
 
@@ -16,7 +16,6 @@ public class Manage {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
-
 
         JButton addButton = new JButton("增加菜品");
         JButton deleteButton = new JButton("删除菜品");
@@ -67,8 +66,4 @@ public class Manage {
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
-            new Manage().createAndShowGUI();
-
-    }
 }
