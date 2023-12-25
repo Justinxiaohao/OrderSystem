@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
  * Package:cn.sdtbu.edu.order.GUI
  * Author:@Wyh
  */
-public class PrivacyJFrame {
+public class PrivacyGUI {
   public static void PrintFrame() {
         JFrame frame = new JFrame("点餐前，请先阅读我们的隐私政策");
         frame.setBounds(500, 300, 600, 450);
@@ -45,7 +45,7 @@ public class PrivacyJFrame {
                         JOptionPane.YES_NO_OPTION);
                 if (res == JOptionPane.YES_OPTION)
                 {
-                     new TakeChoose();
+                     new TakeChooseGUI();
                     frame.dispose();
                 }
                 else
@@ -66,7 +66,7 @@ public class PrivacyJFrame {
     }
 
     public static void main(String[] args) {
-        PrivacyJFrame privacyJFrame = new PrivacyJFrame();
-        PrivacyJFrame.PrintFrame();
+        PrivacyGUI privacyJFrame = new PrivacyGUI();
+        PrivacyGUI.PrintFrame();
     }
 }

@@ -18,8 +18,8 @@ import java.awt.event.ActionListener;
  * Package:PACKAGE_NAME
  * Author:@Wyh
  */
-public class TakeChoose extends JFrame {
-    public TakeChoose() {
+public class TakeChooseGUI extends JFrame {
+    public TakeChooseGUI() {
         Container c = getContentPane();
         JFrame jf = new JFrame("请选择堂食还是打包带走");
         ImageIcon background = new ImageIcon("images/background.jpg");
@@ -48,7 +48,7 @@ public class TakeChoose extends JFrame {
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                JOptionPane.showMessageDialog(TakeChoose.this, "您选择的是堂食用餐！！");
+                JOptionPane.showMessageDialog(TakeChooseGUI.this, "您选择的是堂食用餐！！");
                 new OrderingWindow();
                 jf.dispose();
             }
@@ -56,13 +56,13 @@ public class TakeChoose extends JFrame {
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                JOptionPane.showMessageDialog(TakeChoose.this, "您选择的是打包带走！！");
+                JOptionPane.showMessageDialog(TakeChooseGUI.this, "您选择的是打包带走！！");
                 new OrderingWindow();
                 jf.dispose();
             }
         });
     }
     public static void main(String[] args) {
-        new TakeChoose();
+        new TakeChooseGUI();
     }
 }

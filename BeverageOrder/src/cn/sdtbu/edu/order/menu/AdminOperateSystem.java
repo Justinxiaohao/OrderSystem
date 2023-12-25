@@ -1,4 +1,4 @@
-package cn.sdtbu.edu.order.GUI;
+package cn.sdtbu.edu.order.menu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  * Package:cn.sdtbu.edu.order.GUI.ManageOrder
  * Author:@Wyh
  */
-public class OperateSystem {
+public class AdminOperateSystem {
     public String getName() {
         return name;
     }
@@ -33,15 +33,15 @@ public class OperateSystem {
         this.price = price;
     }
 
-    public static List<OperateSystem> getMealList() {
+    public static List<AdminOperateSystem> getMealList() {
         return mealList;
     }
 
-    public static void setMealList(List<OperateSystem> mealList) {
-        OperateSystem.mealList = mealList;
+    public static void setMealList(List<AdminOperateSystem> mealList) {
+        AdminOperateSystem.mealList = mealList;
     }
 
-    public OperateSystem(String name, String description, double price) {
+    public AdminOperateSystem(String name, String description, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -51,9 +51,9 @@ public class OperateSystem {
     private String description;
     private double price;
 
-    private static List<OperateSystem> mealList = new ArrayList<>();
+    private static List<AdminOperateSystem> mealList = new ArrayList<>();
 
-    public static void addMeal(OperateSystem meal) {
+    public static void addMeal(AdminOperateSystem meal) {
         mealList.add(meal);
     }
 
@@ -61,8 +61,8 @@ public class OperateSystem {
         mealList.removeIf(meal -> meal.getName().equals(name));
     }
 
-    public static OperateSystem findMealByName(String name) {
-        for (OperateSystem meal : mealList) {
+    public static AdminOperateSystem findMealByName(String name) {
+        for (AdminOperateSystem meal : mealList) {
             if (meal.getName().equals(name)) {
                 return meal;
             }
@@ -71,7 +71,7 @@ public class OperateSystem {
     }
 
     public static void updateMeal(String name, String description, double price) {
-        for (OperateSystem meal : mealList) {
+        for (AdminOperateSystem meal : mealList) {
             if (meal.getName().equals(name)) {
                 meal.setDescription(description);
                 meal.setPrice(price);

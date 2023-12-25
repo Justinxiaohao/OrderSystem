@@ -1,5 +1,7 @@
 package cn.sdtbu.edu.order.GUI;
 
+import cn.sdtbu.edu.order.menu.AdminOperateSystem;
+
 import javax.swing.*;
 
 /**
@@ -28,19 +30,19 @@ public class Manage {
             String description = JOptionPane.showInputDialog("请输入菜品描述:");
             String priceString = JOptionPane.showInputDialog("请输入菜品价格:");
             double price = Double.parseDouble(priceString);
-            OperateSystem.addMeal(new OperateSystem(name, description, price));
+            AdminOperateSystem.addMeal(new AdminOperateSystem(name, description, price));
             JOptionPane.showMessageDialog(null, "菜品添加成功!");
         });
 
         deleteButton.addActionListener(e -> {
             String name = JOptionPane.showInputDialog("请输入要删除的菜品名称:");
-            OperateSystem.deleteMeal(name);
+            AdminOperateSystem.deleteMeal(name);
             JOptionPane.showMessageDialog(null, "菜品删除成功!");
         });
 
         editButton.addActionListener(e -> {
             String name = JOptionPane.showInputDialog("请输入要修改的菜品名称:");
-            OperateSystem meal = OperateSystem.findMealByName(name);
+            AdminOperateSystem meal = AdminOperateSystem.findMealByName(name);
             if (meal == null) {
                 JOptionPane.showMessageDialog(null, "找不到指定名称的菜品!");
                 return;
@@ -48,7 +50,7 @@ public class Manage {
             String description = JOptionPane.showInputDialog("请输入新的菜品描述:");
             String priceString = JOptionPane.showInputDialog("请输入新的菜品价格:");
             double price = Double.parseDouble(priceString);
-            OperateSystem.updateMeal(name, description, price);
+            AdminOperateSystem.updateMeal(name, description, price);
             JOptionPane.showMessageDialog(null, "菜品修改成功!");
         });
 

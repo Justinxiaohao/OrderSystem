@@ -6,7 +6,7 @@ package cn.sdtbu.edu.order.menu;
  * Author:@Wyh
  */
 
-import cn.sdtbu.edu.order.GUI.AdminJFrame;
+import cn.sdtbu.edu.order.GUI.AdminLoginGUI;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -155,7 +155,7 @@ public class OrderingWindow extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
-        new AdminJFrame().AdminJFrame();
+        new AdminLoginGUI().AdminJFrame();
 
 //        new OrderingWindow();
     }

@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
  * Package:cn.sdtbu.edu.order.GUI
  * Author:@Wyh
  */
-public class AdminJFrame extends JFrame {
+public class AdminLoginGUI extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
 
