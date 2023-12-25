@@ -1,6 +1,7 @@
 package cn.sdtbu.edu.order.GUI;
 
 import cn.sdtbu.edu.order.GUI.ManageOrder.Manage;
+import cn.sdtbu.edu.order.GUI.ManageOrder.OperateSystem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,6 +37,11 @@ public class AdminJFrame extends JFrame {
                     Manage ma = new Manage();
                     ma.createAndShowGUI();
                     setVisible(false);
+                    OperateSystem.setMealList(SaveOrder.loadFromFile("mealList.dat"));
+
+                    OperateSystem.addMeal(new OperateSystem("新产品", "新产品描述", 10.99));
+
+                    SaveOrder.saveToFile(OperateSystem.getMealList(), "mealList.dat");
                 } else {
                     JOptionPane.showMessageDialog(null, "用户名或密码错误", "错误", JOptionPane.ERROR_MESSAGE);
                 }
